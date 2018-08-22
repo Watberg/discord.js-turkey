@@ -11,7 +11,7 @@
 * [Anlaşılması Gerekenler](anlasilmasi-gerekenler/README.md)
   * [Event'lar ve Handler'lar](anlasilmasi-gerekenler/eventlar-ve-handlerlar.md)
   * [Collection'lar](anlasilmasi-gerekenler/collectionlar.md)
-  * [Roller](anlasilmasi-gerekenler/roller.md)
+  * [Yetkiler](anlasilmasi-gerekenler/roller.md)
   * [Async / Await](anlasilmasi-gerekenler/async-await.md)
 * [Örnekler](ornekler/README.md)
   * [Karşılama Mesajı](ornekler/karsilama-mesaji.md)
