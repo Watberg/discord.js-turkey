@@ -10,7 +10,7 @@ Burada bazı çok temel sık sorulan sorulara yanıt veriyor olacağım. Ancak b
 // Botun aktivite durumunu ayarlamak için. (Bir event içinde olmalıdır.)
 
 client.on('ready', () => {
-    client.user.setActivity('Benimle');
+    client.user.setActivity('Benimle', { type: 'WATCHING' });
 });
 ```
 
@@ -25,7 +25,7 @@ client.on('ready', () => {
 ```javascript
 // Hem aktivite hem de statüsünü değiştirmek için.
 
-client.user.setPresence({ activity: { name: 'benimle' }, status: 'dnd' });
+client.user.setPresence({ activity: { name: 'benimle', type: 'PLAYING' }, status: 'dnd' });
 ```
 
 ### Users ve Members
