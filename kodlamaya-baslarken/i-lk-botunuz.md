@@ -5,20 +5,20 @@ Bu bölüm "Bot Yapımına Başlamak" kısımlarındaki anlatımları takip eder
 Burada size bazı basit tekniklerle bot geliştirme mantığını sizlerle paylaşıyor olacağım. Bir önceki bölümde oluşturmuş olduğumuz örnekle devam edeceğiz:
 
 ```javascript
-const Discord = require("discord.js");
-const client = new Discord.Client();
+const { Client } = require('discord.js');
+const client = new Client();
 
-client.on("ready", () => {
-  console.log("Her şey hazır!");
+client.on('ready', () => {
+  console.log('Her şey hazır!');
 });
 
-client.on("message", (message) => {
-  if (message.content.startsWith("zig")) {
-    message.channel.send("zag!");
+client.on('message', { content, channel } => {
+  if (content.startsWith('zig')) {
+    channel.send('zag!');
   }
 });
 
-client.login("AşırıGizliBotToken");
+client.login('AşırıGizliBotToken');
 ```
 
 ## Events Nedir?
@@ -26,7 +26,7 @@ client.login("AşırıGizliBotToken");
 Başka bir şey yapmadan önce anlamanız gereken şeylerden bir tanesi `events` kısmıdır. Aşağıdaki kod ise bir event örneğidir:
 
 ```javascript
-client.on("message", (message) => {
+client.on('message', message => {
 // Buradaki kod message event'ı tetiklendiğinde çalışır.
 });
 ```
@@ -48,14 +48,9 @@ Bu event'ların tam listesini görmek istiyorsanız [buradaki sayfa](https://dis
 > Bundan sonra kodun belirli yerlerini ele alarak açıklama yapacağım.
 
 ```javascript
-client.on("message", (message) => {
-  if (message.content.startsWith("zig")) {
-    message.channel.send("zag!");
-  } else
-
-  if (message.content.startsWith("naber")) {
-    message.channel.send("iyiyim!");
-  }
+client.on('message', { content, channel } => {
+  if (content.startsWith('zig')) return channel.send('zag!');
+  if (content.startsWith('naber')) return channel.send('iyiyim!');
 });
 ```
 

@@ -27,20 +27,20 @@ Kurulumunu bitirdikten sonra projeniz için bir dosya oluşturun ve dicord.js do
 Aşağıdaki kod basitçe bir ping/pong etkileşimine giren bir bottur. Yazıyı `app.js` \(yada artık nasıl isterseniz\) kaydederek, aşağıdaki yere daha öncesinde almış olduğunuz **token**'ı yapıştırın.
 
 ```javascript
-const Discord = require("discord.js");
-const client = new Discord.Client();
+const { Client } = require('discord.js');
+const client = new Client();
 
-client.on("ready", () => {
-  console.log("Her şey hazır!");
+client.on('ready', () => {
+  console.log('Her şey hazır!');
 });
 
-client.on("message", (message) => {
-  if (message.content.startsWith("zig")) {
-    message.channel.send("zag!");
+client.on('message', { content, channel } => {
+  if (content.startsWith('zig')) {
+    channel.send('zag!');
   }
 });
 
-client.login("AşırıGizliBotToken");
+client.login('AşırıGizliBotToken');
 ```
 
 ## Botu Çalıştırmak
