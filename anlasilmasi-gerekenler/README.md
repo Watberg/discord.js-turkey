@@ -1,0 +1,4 @@
+# Anlaşılması Gerekenler
+
+
+

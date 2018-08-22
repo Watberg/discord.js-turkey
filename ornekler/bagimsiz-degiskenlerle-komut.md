@@ -1,0 +1,4 @@
+# Bağımsız Değişkenlerle Komut
+
+
+

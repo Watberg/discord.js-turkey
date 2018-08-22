@@ -4,7 +4,7 @@ Bu bölüm "Bot Yapımına Başlamak" kısımlarındaki anlatımları takip eder
 
 Burada size bazı basit tekniklerle bot geliştirme mantığını sizlerle paylaşıyor olacağım. Bir önceki bölümde oluşturmuş olduğumuz örnekle devam edeceğiz:
 
-```js
+```javascript
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
@@ -25,7 +25,7 @@ client.login("AşırıGizliBotToken");
 
 Başka bir şey yapmadan önce anlamanız gereken şeylerden bir tanesi `events` kısmıdır. Aşağıdaki kod ise bir event örneğidir:
 
-```js
+```javascript
 client.on("message", (message) => {
 // Buradaki kod message event'ı tetiklendiğinde çalışır.
 });
@@ -47,7 +47,7 @@ Bu event'ların tam listesini görmek istiyorsanız [buradaki sayfa](https://dis
 
 > Bundan sonra kodun belirli yerlerini ele alarak açıklama yapacağım.
 
-```js
+```javascript
 client.on("message", (message) => {
   if (message.content.startsWith("zig")) {
     message.channel.send("zag!");
@@ -59,7 +59,7 @@ client.on("message", (message) => {
 });
 ```
 
-Yukarıdaki kodu kopyalayıp ilgili yere yapıştırarak, botunuzu yeniden başlatın. \(`node app.js`\) Aslında botunuzu yeniden başlatmanın çok daha  pratik yöntemleri mevcut. Bu konulara dökümantasyonumuzun ilerleyen bölümlerinde değineceğim.
+Yukarıdaki kodu kopyalayıp ilgili yere yapıştırarak, botunuzu yeniden başlatın. \(`node app.js`\) Aslında botunuzu yeniden başlatmanın çok daha pratik yöntemleri mevcut. Bu konulara dökümantasyonumuzun ilerleyen bölümlerinde değineceğim.
 
 Şimdi botun olduğu sunucuya giredek, yeni komutumuz olan "naber"i deneyebilirsiniz. Bir yandan da hala "zig" yazdığımızda "zag!" cevabı alıyor olacaksınız.
 

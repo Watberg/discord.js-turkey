@@ -1,8 +1,8 @@
-# Ek Olarak: Permission İsimleri
+# Roller
 
 Burada permission isimlerinin listesini bulabilirsiniz. `.hasPermission(isim)` şeklinde kullanabilirsiniz:
 
-```js
+```javascript
 {
   CREATE_INSTANT_INVITE: true,
   KICK_MEMBERS: true,
@@ -33,6 +33,4 @@ Burada permission isimlerinin listesini bulabilirsiniz. `.hasPermission(isim)` �
   MANAGE_EMOJIS: true
 }
 ```
-
-
 

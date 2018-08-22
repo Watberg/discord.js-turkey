@@ -1,4 +1,4 @@
-# Discord.js için Hazırlanırken
+# Giriş
 
 ## Giriş
 
@@ -12,7 +12,7 @@ Bunun dışında şimdiye kadar alışılmış bir yabancı dil kalıbı mevcut 
 
 Dökümantasyon ile ilgili soru ve görüşlerinizi, isteklerinizi discord sunucusu üzerinden iletebilir ve bana ulaşabilirsiniz. İstek ve önerilerinizi dinlemekten mutluluk duyacağım.
 
-[![](/assets/Ekran Resmi 2017-07-25 16.14.47.png)](https://discord.gg/sRRYDFz)
+[![](.gitbook/assets/ekran-resmi-2017-07-25-16.14.47.png)](https://discord.gg/sRRYDFz)
 
 ## Dökümantasyon Güncellemesi
 
