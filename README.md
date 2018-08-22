@@ -24,5 +24,7 @@ Node.js Versiyonu: `10.9.0`
 
 Discord.js Versiyonu: `12.0.0-dev`
 
+Eslint:
+
 Son Dökümantasyon Güncellemesi: `22/08/2018`
 
