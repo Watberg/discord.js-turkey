@@ -45,7 +45,9 @@ Bu event'ların tam listesini görmek istiyorsanız [buradaki sayfa](https://dis
 
 Öğrenmek isteyeceğiniz en mantıklı şeylerden biri de, botunuz için ikinci bir komutu nasıl ekleyeceğinizdir. Bu vermiş olacağım örnekten çok daha iyileri mevcut olsa da, şimdilik senin işini görecektir.
 
-> Bundan sonra kodun belirli yerlerini ele alarak açıklama yapacağım.
+{% hint style="info" %}
+Buradan sonra Discord.js'yi oluşturan ve başlatan kodları kaldırıp, kodun belirli kısımlarına yoğunlaşacağım.
+{% endhint %}
 
 ```javascript
 client.on('message', { content, channel } => {
@@ -64,5 +66,29 @@ Bir önek kullanılmazsa botun ne kadar çok şeye cevap vereceğini tahmin edeb
 
 Bunların ilki, benzersiz bir önek kullanmazsanız sunucunuzda birden fazla bot varsa, hepsi birden mesajınıza yanıt vermek isteyecektir. İkincisi ise, yukarıdaki örnekte mesajımıza şu şekilde başlıyoruz "naber". Eğer şunu yazarsanız da bot size cevap verecektir: "naber ayşe bugün iyi misin?". Gördüğünüz gibi botumuz bu durumda size "iyiyim!" cevabını verdi. Oysa siz, bir başkasına söylemiştiniz.
 
-Benzersiz bir prefix \(önek\) kullanırsak, bu iki büyük sorundan rahatça kurtulmuş olacağız.
+Benzersiz bir prefix \(önek\) kullanırsak, bu iki büyük sorundan rahatça kurtulmuş olacağız. Hemen bir örnekle detaylandıralım.
+
+```javascript
+// Bir önek tanımlıyoruz.
+const prefix = '!';
+
+// Sonrasında bunu uyguluyoruz.
+client.on('message', { content, channel } => {
+  // Eğer mesaj önekle başlamıyorsa kodun geri kalanını durduruyoruz.
+  if (!content.startsWith(prefix)) return;
+
+  if (content.startsWith(prefix + 'zig')) return channel.send('zag!');
+  if (content.startsWith(prefix + 'naber')) return channel.send('iyiyim!');
+});
+```
+
+Yapmış olduğumuz değişiklik olduçka basitti. Hadi bunu biraz açıklayalım;
+
+* `const prefix = '!';` önekin ne olduğunu tanımlar. Elbette bunu istediğiniz gibi değiştirebilirsiniz.
+* Bu satır `if(!content.startsWith(prefix)) return;` kısaca şöyle okunabilir; "Eğer mesajın içeriği belirlenmiş olan önek ile başlamıyorsa, ne yapıyorsan durdur ve cevap verme." Bu kodunuzun geri kalanının çalışmasını engelleyerek daha duyarlı ve hızlı hale getirir.
+* Artık bir komutunuz var. `startsWith(prefix + 'naber')` bu satırda önek ve yazıyı birleştirerek sadece `!naber` komutuna cevap vermesini sağladık.
+
+{% hint style="warning" %}
+Bir önek kullanmadığınızda RAM ve işlemci gücünü kalabalık sunucularda oldukça fazla harcanmasına neden olursunuz.
+{% endhint %}
 
