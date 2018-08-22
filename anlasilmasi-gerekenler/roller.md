@@ -1,6 +1,6 @@
 # Roller
 
-Burada permission isimlerinin listesini bulabilirsiniz. `.hasPermission(isim)` şeklinde kullanabilirsiniz:
+Burada permission isimlerinin listesini bulabilirsiniz. `.hasPermission('isim', [options])` şeklinde kullanabilirsiniz \(options parametresi isteğe bağlıdır ve Object olmalıdır.\);
 
 ```javascript
 {
