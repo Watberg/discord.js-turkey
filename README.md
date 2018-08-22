@@ -20,9 +20,9 @@ Burada yazılan içeriği çevrimiçi olarak gün geçtikçe düzenlemek istiyor
 
 Dökümantasyonu oluştururken kullanılacak olan;
 
-Node.js Versiyonu: `8.2.1`
+Node.js Versiyonu: `10.9.0`
 
-Discord.js Versiyonu: `11.1.0`
+Discord.js Versiyonu: `12.0.0-dev`
 
-Son Dökümantasyon Güncellemesi: `30/07/2018`
+Son Dökümantasyon Güncellemesi: `22/08/2018`
 
