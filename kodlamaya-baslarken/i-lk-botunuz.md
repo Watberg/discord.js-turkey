@@ -92,3 +92,32 @@ Yapmış olduğumuz değişiklik olduçka basitti. Hadi bunu biraz açıklayalı
 Bir önek kullanmadığınızda RAM ve işlemci gücünü kalabalık sunucularda oldukça fazla harcanmasına neden olursunuz.
 {% endhint %}
 
+Eğer yapmış olduklarımızı derleryecek olursak;
+
+```javascript
+const { Client } = require('discord.js');
+const client = new Client();
+
+client.on('ready', () => {
+  console.log('Her şey hazır!');
+});
+
+// Bir önek tanımlıyoruz.
+const prefix = '!';
+
+// Sonrasında bunu uyguluyoruz.
+client.on('message', { content, channel, author } => {
+  /* 
+  *  Eğer mesaj önekle başlamıyorsa kodun geri kalanını durduruyoruz.
+  * 'yada' operatörü ile botun attığı mesajları da engelliyoruz.
+  *  kendisine cevap vermemesi için
+  */
+  if (!content.startsWith(prefix) || author.bot) return;
+
+  if (content.startsWith(prefix + 'zig')) return channel.send('zag!');
+  if (content.startsWith(prefix + 'naber')) return channel.send('iyiyim!');
+});
+
+client.login('AşırıGizliBotToken');
+```
+
