@@ -39,7 +39,7 @@ Peki bunu bilmeniz neden önemli? Eğer botunuzu büyük bir sunucuda kullanmay�
 
 `guildMemberAdd` : Sunucunuza gelen her yeni kullanıcıda tetiklenir.
 
-Bu event'ların tam listesini görmek istiyorsanız [buradaki sayfa](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=channelCreate)yı ziyaret edebilirsiniz.
+Bu event'ların tam listesini görmek istiyorsanız [buradaki sayfa](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-channelCreate)yı ziyaret edebilirsiniz.
 
 ## İkinci Komutu Eklemek
 
