@@ -25,3 +25,4 @@ Node.js Versiyonu: `8.2.1`
 Discord.js Versiyonu: `11.1.0`
 
 Son Dökümantasyon Güncellemesi: `30/07/2018`
+
